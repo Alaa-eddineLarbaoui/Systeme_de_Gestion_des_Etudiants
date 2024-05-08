@@ -24,7 +24,7 @@ public class ControllerEtudiant{
 
         return "Accueil";
     }
-    
+
     // La methode Afficher:
     @RequestMapping("/etudiants")
     public String showEtudiants(Model model) {
@@ -32,6 +32,11 @@ public class ControllerEtudiant{
         model.addAttribute("Etudiants", etudiants);
         return "Student";
     }
-
+    //La methode Ajouter:
+    @RequestMapping(value = "/saveEtudiant")
+    public String saveEtudiant(Etudiant etudiant) {
+        etudiants.add(etudiant);
+        return "redirect:/etudiants";
+    }
 
 }
