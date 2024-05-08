@@ -38,5 +38,11 @@ public class ControllerEtudiant{
         etudiants.add(etudiant);
         return "redirect:/etudiants";
     }
+    //LAfonction Supprimer:
+    @RequestMapping(value="/deleteEtudiant/{matricule}")
+    public String deleteEtudiant(@PathVariable("matricule") String matricule){
+        etudiants.removeIf(etudiant -> etudiant.getMatricule().equals(matricule));
+        return "redirect:/etudiants";
+    }
 
 }
