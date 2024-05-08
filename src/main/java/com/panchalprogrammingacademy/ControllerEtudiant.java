@@ -24,7 +24,14 @@ public class ControllerEtudiant{
 
         return "Accueil";
     }
+    
+    // La methode Afficher:
+    @RequestMapping("/etudiants")
+    public String showEtudiants(Model model) {
 
+        model.addAttribute("Etudiants", etudiants);
+        return "Student";
+    }
 
 
 }
