@@ -38,11 +38,30 @@ public class ControllerEtudiant{
         etudiants.add(etudiant);
         return "redirect:/etudiants";
     }
-    //LAfonction Supprimer:
+    //LA fonction Supprimer:
     @RequestMapping(value="/deleteEtudiant/{matricule}")
     public String deleteEtudiant(@PathVariable("matricule") String matricule){
         etudiants.removeIf(etudiant -> etudiant.getMatricule().equals(matricule));
         return "redirect:/etudiants";
     }
+    @RequestMapping(value="/searchEtudiant/{matricule}")
+    public String serachEtudiant(@PathVariable("matricule") String matricule ,Model model){
+     for(Etudiant etudient : etudiants ){
+         if (etudient.getMatricule().equals(matricule)){
+             model.addAttribute("search",etudient);
+         }
+     }
+        return "Modifier";
+    }
+    @RequestMapping(value = "/update")
+    public String UpdateEtudient( @ModelAttribute("matricule") String matricule ,Etudiant etudiant) {
+      for (Etudiant etudiant1 : etudiants){
+          if(etudiant1.getMatricule().equals(matricule)){
+              etudiant1.setNom(etudiant.getNom());
+          }
+      }
+        return "redirect:/etudiants";
+    }
+
 
 }
