@@ -77,8 +77,10 @@
             </td>
         </tr>
     </c:forEach>
+
     </tbody>
 </table>
-<p style="text-align: left;"><a href="${pageContext.request.contextPath}/">Retour</a></p>
+<p style="text-align: CENTER;"><a href="${pageContext.request.contextPath}/">Retour</a></p>
+
 </body>
 </html>

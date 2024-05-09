@@ -55,13 +55,13 @@
     <h1>Add Student</h1>
     <form action="saveEtudiant" method="post">
         <label for="nom">Name:</label>
-        <input type="text" id="nom" name="nom"><br>
+        <input type="text" id="nom" name="nom" required ><br>
         <label for="Numero">Numero:</label>
-        <input type="text" id="Numero" name="Numero"><br>
+        <input type="text" id="Numero" name="Numero" required><br>
         <label for="matricule">Matricule:</label>
-        <input type="text" id="matricule" name="matricule"><br>
+        <input type="text" id="matricule" name="matricule" required><br>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br>
+        <input type="text" id="email" name="email" required><br>
         <input type="submit" value="Add Student">
 
     </form>
