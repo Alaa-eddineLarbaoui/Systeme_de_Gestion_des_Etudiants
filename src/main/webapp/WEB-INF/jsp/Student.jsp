@@ -51,15 +51,16 @@
             justify-content: space-between;
         }
         .body{
-            background-image: url("https://en.idei.club/uploads/posts/2023-06/1686191971_en-idei-club-p-artificial-intelligence-background-dizain-48.jpg");
+            background-image: url("https://en.idei.club/uploads/posts/2023-06/1686191971_en-idei-club-p-artificial-intelligence-background-dizain-48.jpg" );
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+
         }
         .ButtonReturnn{
             display: flex;
             justify-content: center;
             margin-top: 30px;
-            width: 167%;
         }
 
         .ButtonReturn {

@@ -19,11 +19,27 @@
     #container {
         width: 50%;
         margin: 50px auto;
-        background-color: #fff;
+
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
+
+        position: relative;
+
+
+        height: 450px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+
+        backdrop-filter: blur(15px);
     }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
 
     h1 {
         text-align: center;
@@ -64,22 +80,31 @@
         justify-content: end;
         margin-top: 19px;
     }
+    .body{
+        background-size: cover;
+        background-image: url("https://news.uchicago.edu/sites/default/files/images/2022-12/abstract-illustration.jpg ");
+        background-position: center;
+    }
+    .titre{
+        color: white;
+    }
+    .label{
+        color: white;
+    }
     </style>
 </head>
 <body class="body">
 <div id="container">
-    <h1>Modify Student</h1>
+    <h1 class="titre">Modify Student</h1>
     <form action="${pageContext.request.contextPath}/update" method="post">
-        <label for="nom">Name:</label>
+        <label  class="label" for="nom">Name:</label>
         <input type="text" id="nom" name="nom" value="${search.getNom()}" required><br>
-        <label for="Numero">Numero:</label>
+        <label  class="label" for="Numero">Numero:</label>
         <input type="text" id="Numero" name="Numero" value="${search.getNumero()}" required><br>
         <input type="hidden" id="matricule" name="matricule" value="${search.getMatricule()}" required><br>
-        <label for="email">Email:</label>
+        <label class="label" for="email">Email:</label>
         <input type="text" id="email" name="email" value="${search.getEmail()}" required><br>
         <div class="ButtonModify"><input type="submit" value="Modify"></div>
-
-
     </form>
 </div>
 </body>
