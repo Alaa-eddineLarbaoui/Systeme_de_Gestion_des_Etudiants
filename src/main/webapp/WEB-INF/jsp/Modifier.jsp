@@ -66,7 +66,7 @@
     }
     </style>
 </head>
-<body>
+<body class="body">
 <div id="container">
     <h1>Modify Student</h1>
     <form action="${pageContext.request.contextPath}/update" method="post">
@@ -74,8 +74,7 @@
         <input type="text" id="nom" name="nom" value="${search.getNom()}" required><br>
         <label for="Numero">Numero:</label>
         <input type="text" id="Numero" name="Numero" value="${search.getNumero()}" required><br>
-        <label for="matricule">Matricule:</label>
-        <input type="text" id="matricule" name="matricule" value="${search.getMatricule()}" required><br>
+        <input type="hidden" id="matricule" name="matricule" value="${search.getMatricule()}" required><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" value="${search.getEmail()}" required><br>
         <div class="ButtonModify"><input type="submit" value="Modify"></div>

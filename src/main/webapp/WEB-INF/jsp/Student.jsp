@@ -12,7 +12,7 @@
         }
         h2 {
             text-align: center;
-            color: #333;
+            color:#ffffff;
             margin-top: 20px;
         }
         table {
@@ -30,7 +30,7 @@
             border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #007bff;
+            background-color:#caa863;
             color: #fff;
         }
         tr:nth-child(even) {
@@ -40,7 +40,7 @@
             background-color: #ddd;
         }
         a {
-            color: #007bff;
+            color: #16829f;
             text-decoration: none;
         }
         a:hover {
@@ -50,9 +50,34 @@
             display: flex;
             justify-content: space-between;
         }
+        .body{
+            background-image: url("https://en.idei.club/uploads/posts/2023-06/1686191971_en-idei-club-p-artificial-intelligence-background-dizain-48.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .ButtonReturnn{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            width: 167%;
+        }
+
+        .ButtonReturn {
+            width: 104%;
+            padding: 10px;
+            background-color: #caa863;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .ButtonReturn {
+            background-color: #caa863;
+        }
     </style>
 </head>
-<body>
+<body class="body">
 <h2>Liste des Etudiants</h2>
 <table>
     <thead>
@@ -79,8 +104,14 @@
     </c:forEach>
 
     </tbody>
+
 </table>
-<p style="text-align: CENTER;"><a href="${pageContext.request.contextPath}/">Retour</a></p>
+<div class="ButtonReturnn">
+    <a href="${pageContext.request.contextPath}/">
+        <button class="ButtonReturn" type="button">return to home page</button>
+    </a>
+
+</div>
 
 </body>
 </html>

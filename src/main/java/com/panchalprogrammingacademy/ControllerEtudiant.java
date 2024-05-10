@@ -58,6 +58,9 @@ public class ControllerEtudiant{
       for (Etudiant etudiant1 : etudiants){
           if(etudiant1.getMatricule().equals(matricule)){
               etudiant1.setNom(etudiant.getNom());
+              etudiant1.setNumero(etudiant.getNumero());
+              etudiant1.setEmail(etudiant.getEmail());
+
           }
       }
         return "redirect:/etudiants";

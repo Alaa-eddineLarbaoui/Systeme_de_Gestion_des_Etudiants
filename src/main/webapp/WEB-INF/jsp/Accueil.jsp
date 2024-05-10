@@ -15,9 +15,12 @@
             width: 400px;
             margin: 50px auto;
             background-color: #fff;
-            border-radius: 35px;
+            border-radius: 25px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 85px;
+
+
         }
         h1 {
             text-align: center;
@@ -36,7 +39,7 @@
             border-radius: 4px;
         }
         input[type="submit"]{
-            width: 100%;
+            width: 28%;
             padding: 10px;
             border: none;
             background-color: #007bff;
@@ -48,9 +51,19 @@
         input[type="button"]:hover {
             background-color: #0056b3;
         }
+        .body {
+            background-image: url('https://en.idei.club/uploads/posts/2023-06/1687224636_en-idei-club-p-scientific-background-dizain-krasivo-9.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .ButtonAdd{
+            display: flex;
+            justify-content: end;
+        }
+
     </style>
 </head>
-<body>
+<body class="body">
 <div id="container">
     <h1>Add Student</h1>
     <form action="saveEtudiant" method="post">
@@ -62,7 +75,13 @@
         <input type="text" id="matricule" name="matricule" required><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" required><br>
-        <input type="submit" value="Add Student">
+
+        <div class="ButtonAdd"><input type="submit" value="Add Student"></div>
+        <a href="/Gestion_Des_Entudients_war_exploded/etudiants">
+            <button type="button">Afficher la liste des étudiants</button>
+        </a>
+
+
 
     </form>
 </div>
